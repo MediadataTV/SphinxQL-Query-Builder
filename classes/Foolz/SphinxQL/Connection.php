@@ -256,7 +256,8 @@ class Connection
         if ($value instanceof \Foolz\SphinxQL\Expression) {
             return $value->value();
         }
-
+	return $value;
+	/*
         if ($value === '*') {
             return $value;
         }
@@ -267,7 +268,8 @@ class Connection
             $pieces[$key] = '`'.$piece.'`';
         }
 
-        return implode('.', $pieces);
+	return implode('.', $pieces);
+	 */
     }
 
     /**
